@@ -1,6 +1,7 @@
-honeypot.db
+config.yml
+data/
 __pycache__/
 *.pyc
 *.pyo
 .env
-config.yml
+*.db

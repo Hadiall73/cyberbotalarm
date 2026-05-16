@@ -12,12 +12,18 @@ email:
   password: ""
   receiver: ""
 
+abuseipdb_key: ""  # Optional: https://www.abuseipdb.com/api
+
 honeypot:
-  ssh_port: 2222
-  web_port: 8080
+  ssh_port:       2222
+  web_port:       8080
   dashboard_port: 9999
-  scan_ports: [21, 23, 25, 80, 443, 3306, 5432, 6379, 8888, 9200]
+  mysql_port:     3306
+  ftp_port:       21
+  redis_port:     6379
+  telnet_port:    23
+  scan_ports:     [25, 5432, 8888, 9200, 27017]
 
 alerts:
-  min_severity: "low"
-  cooldown_seconds: 30
+  cooldown_seconds: 20
+  autoblock_score:  80
