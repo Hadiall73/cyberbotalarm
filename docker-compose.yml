@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  honeypot:
+    build: .
+    container_name: cyberbotalarm
+    restart: unless-stopped
+    ports:
+      - "2222:2222"   # SSH Honeypot
+      - "8080:8080"   # Web Honeypot
+      - "9999:9999"   # Dashboard
+      - "21:21"       # FTP Trap
+      - "23:23"       # Telnet Trap
+      - "3306:3306"   # MySQL Trap
+      - "5432:5432"   # PostgreSQL Trap
+      - "6379:6379"   # Redis Trap
+    volumes:
+      - ./honeypot.db:/app/honeypot.db
+      - ./config.yml:/app/config.yml
+    environment:
+      - PYTHONUNBUFFERED=1

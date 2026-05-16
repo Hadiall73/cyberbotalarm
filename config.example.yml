@@ -1,0 +1,23 @@
+telegram:
+  token: "DEIN_BOT_TOKEN"
+  chat_id: "DEINE_CHAT_ID"
+
+discord:
+  webhook_url: ""
+
+email:
+  smtp_server: "smtp.gmail.com"
+  smtp_port: 587
+  sender: ""
+  password: ""
+  receiver: ""
+
+honeypot:
+  ssh_port: 2222
+  web_port: 8080
+  dashboard_port: 9999
+  scan_ports: [21, 23, 25, 80, 443, 3306, 5432, 6379, 8888, 9200]
+
+alerts:
+  min_severity: "low"
+  cooldown_seconds: 30
